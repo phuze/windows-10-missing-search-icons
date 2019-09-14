@@ -2,6 +2,9 @@
 
 If you've arrived here, it means you've been plauged with the case of missing/corrupt icons for Windows Store applications, while using the search functionality in Windows 10.
 
+![Icon Works in the App List](applist.png)
+![Icon Missing from Search List](search.png)
+
 I have identified a means to resolve the issue. It does not involve rebuilding the icon cache, re-associating your .ico file types, running a system file check, or any other one of the repeated options that never work. However, it does involve some manual effort, so I consider this a viable option only for those irritated enough to address it.
 
 ## Identifying the Issue
@@ -54,6 +57,6 @@ Bearing in mind, this is only a stop-gap solution and ideally, finding the root 
 
 I considered writing a program that would automatically find and replace some of the most common Windows icons, (ie: Calculator, Settings, etc), but I'm not not sure I really want to invest the time. If anyone else would like to explore that idea, I think it would be great.
 
-I'll further add that in my efforts to narrow down the real cause, I found an cases where sometimes, the `AppManifest.xml` files for some applications referenced non-existant icon image assets. There were also some cases where the AppManifest correctly referenced the image asset, yet was still missing while using Windows Search.
+I'll further add that in my efforts to narrow down the real cause, I found some instances where the `AppManifest.xml` files for applications referenced non-existant icon image assets. There were also some instances where the AppManifest correctly referenced the image asset, yet was still missing while using Windows Search.
 
 My personal feeling is that whatever is happening under the hood, is related to Cortana, and that whatever process builds the Cortana icon cache, is either unable to find the application manifest files, or is otherwise consuming them incorrectly, and thus it does not build the icon cache with the appropriate application icons.
