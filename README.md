@@ -7,6 +7,14 @@ If you've arrived here, it means you've been plauged with the case of missing/co
 
 I have identified a means to resolve the issue. It does not involve rebuilding the icon cache, re-associating your .ico file types, running a system file check, or any other one of the repeated options that never work. However, it does involve some manual effort, so I consider this a viable option only for those irritated enough to address it.
 
+## Repository Contents
+
+The `helpers` directory contains a Windows batch script that can be used to reset your icon cache. I've included this here for reference, though I do not expect it to be useful in remedying the issue.
+
+The `corrupted` directory contains other corrupted Windows application files for your reference. If I find fixed icon replacements for those, I will move those references into the assets folder.
+
+The `assets` directory contains applications icons found in the `WindowsApps` folder which can be used to manually fix the missing search icons using the method as described in the rest of this readme.
+
 ## Identifying the Issue
 
 The reason rebuilding your icon cache never works, is because the standard icon cache databases everyone tells you to delete, are not related. Windows 10 stores icon caches in all sorts of places on your OS. The icons which you see when searching, come from _Cortana's icon cache_. To get there, open up Window's search and enter `%LocalAppData%\Packages`. This will take you to your `Packages` folder in your local `AppData` (C:\Users\{USER}\AppData\Local\Packages). From here, look for the `Cortana` app. In my case, which will likely be the same for most Windows 10 users, it was called `Microsoft.Windows.Cortana_cw5n1h2txyewy`.
