@@ -51,7 +51,7 @@ If you now search Xbox in Windows, you'll find that your icon is fixed.
 
 ## Head Start
 
-In order to save yourself some time, check out the `apps` folder in this repository. I've included some application icons. In each application folder, you'll find the `logo.png` icon, and a reference to the name of the Cortana icon file. Note that this is the _corrupted_ version -- I've only included it only as a filename reference. I can't confirm if the filename will be the same for other uses.
+In order to save yourself some time, check out the [assets](/tree/master/assets) folder in this repository. I've included some application icons. In each application folder, you'll find the `logo.png` icon, and a reference to the name of the Cortana icon file. Note that this is the _corrupted_ version -- I've only included it only as a filename reference. I can't confirm if the filename will be the same for other uses.
 
 ## Important
 
