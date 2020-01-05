@@ -1,0 +1,89 @@
+{
+    "repairs": [
+        {
+            "title": "Acrobat Notification Client",
+            "corrupt":"AcrobatNotificationClient_e1rzdqpraam7r!App",
+            "repair":"adobe-acrobatnotification\\Square44x44LogoRd.scale-200.png"
+        },
+        {
+            "title": "Windows Maps",
+            "corrupt":"Microsoft_WindowsMaps_8wekyb3d8bbwe!App",
+            "repair":"microsoft-maps\\microsoftmapsMapsAppList.targetsize-96.png"
+        },
+        {
+            "title": "Bing News",
+            "corrupt":"Microsoft_BingNews_8wekyb3d8bbwe!AppexNews",
+            "repair":"microsoft-news\\News_LogoSmall_Light.scale-200.png"
+        },
+        {
+            "title": "Windows Photos",
+            "corrupt":"Microsoft_Windows_Photos_8wekyb3d8bbwe!App",
+            "repair":"microsoft-photos\\PhotosAppList.contrast-black_scale-200_Light.png"
+        },
+        {
+            "title": "Windows Photos",
+            "corrupt":"Microsoft_Windows_Photos_8wekyb3d8bbwe!SecondaryEntry",
+            "repair":"microsoft-photos\\PhotosAppList.contrast-black_scale-200_Light.png"
+        },
+        {
+            "title": "Microsoft Power BI Desktop",
+            "corrupt":"Microsoft_MicrosoftPowerBIDesktop_8wekyb3d8bbwe!Microsoft_MicrosoftPowerBIDesktop",
+            "repair":"microsoft-powerbi\\Square44x44Logo.scale-200.png"
+        },
+        {
+            "title": "Microsoft Sports",
+            "corrupt":"Microsoft_BingSports_8wekyb3d8bbwe!AppexSports",
+            "repair":"microsoft-sports\\Sports_LogoSmall_Light.scale-200.png"
+        },
+        {
+            "title": "Windows Store",
+            "corrupt":"Microsoft_WindowsStore_8wekyb3d8bbwe!App",
+            "repair":"microsoft-store\\StoreAppList.scale-200_Light.png"
+        },
+        {
+            "title": "Windows Ubuntu WSL",
+            "corrupt":"CanonicalGroupLimited_UbuntuonWindows_79rhkp1fndgsc!ubuntu",
+            "repair":"windows-ubuntuwsl\\Square44x44Logo.scale-200.png"
+        },
+        {
+            "title": "StarCraft II",
+            "corrupt":"P__Games_StarCraft II_StarCraft II_exe",
+            "repair":"starcraft2\\starcraft2-100.png"
+        },
+        {
+            "title": "Microsoft Paint",
+            "corrupt":"Microsoft_MSPaint_8wekyb3d8bbwe!Microsoft_MSPaint",
+            "repair":"microsoft-paint\\logo.png"
+        },
+        {
+            "title": "Microsoft Calculator",
+            "corrupt":"Microsoft_WindowsCalculator_8wekyb3d8bbwe!App",
+            "repair":"microsoft-calculator\\logo.png"
+        },
+        {
+            "title": "Xbox App - Beta",
+            "corrupt":"Microsoft_GamingApp_8wekyb3d8bbwe!Microsoft_Xbox_App",
+            "repair":"xbox-beta\\logo.png"
+        },
+        {
+            "title": "Xbox Gaming Overlay",
+            "corrupt":"Microsoft_XboxGamingOverlay_8wekyb3d8bbwe!App",
+            "repair":"xbox-game-bar\\logo.png"
+        },
+        {
+            "title": "Microsoft Sticky Notes",
+            "corrupt":"Microsoft_MicrosoftStickyNotes_8wekyb3d8bbwe!App",
+            "repair":"microsoft-stickynotes\\logo.png"
+        },
+        {
+            "title": "Dynamic Theme",
+            "corrupt":"55888ChristopheLavalle_DynamicTheme_jdggxwd41xcr0!App",
+            "repair":"dynamictheme\\logo.jpg"
+        },
+        {
+            "title": "Windows Settings",
+            "corrupt":"windows_immersivecontrolpanel_cw5n1h2txyewy!microsoft_windows_immersivecontrolpanel",
+            "repair":"windows-settings\\settings.png"
+        }
+    ]
+}
