@@ -11,8 +11,8 @@ Previously, this was entirely a manual process. I am working on a Python tool wh
 
 ## Run the Repair Tool
 
-Open an elevated command prompt and run the Python script.
-`> python <path_to_script>/repair.py`
+Open an elevated command prompt, navigate to the directory with `repair.py` and run the Python script:
+`python repair.py`
 
 ## Repository Contents
 
