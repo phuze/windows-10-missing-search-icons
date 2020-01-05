@@ -5,21 +5,30 @@ If you've arrived here, it means you've been plauged with the case of missing/co
 ![Icon Works in the App List](applist.png)
 ![Icon Missing from Search List](search.png)
 
-I have identified a means to resolve the issue. It does not involve rebuilding the icon cache, re-associating your .ico file types, running a system file check, or any other one of the repeated options that never work. However, it does involve some manual effort, so I consider this a viable option only for those irritated enough to address it.
+## Update
+
+Previously, this was entirely a manual process. I am working on a Python tool which will automate the process.
+
+## Run the Repair Tool
+
+Open an elevated command prompt and run the Python script.
+`> python <path_to_script>/repair.py`
 
 ## Repository Contents
 
 The `helpers` directory contains a Windows batch script that can be used to reset your icon cache. I've included this here for reference, though I do not expect it to be useful in remedying the issue.
 
-The `corrupted` directory contains other corrupted Windows application files for your reference. If I find fixed icon replacements for those, I will move those references into the assets folder.
-
-The `assets` directory contains applications icons found in the `WindowsApps` folder which can be used to manually fix the missing search icons using the method as described in the rest of this readme.
+The `repair` directory contains the repair tool `repair.py`, in addition to an `icons` folder which contains icon fixes, as well as a `toolkit` folder which contains both the repair list `repairs.json` as well as a few files used in repair process.
 
 ## Identifying the Issue
 
-The reason rebuilding your icon cache never works, is because the standard icon cache databases everyone tells you to delete, are not related. Windows 10 stores icon caches in all sorts of places on your OS. The icons which you see when searching, come from _Cortana's icon cache_. To get there, open up Window's search and enter `%LocalAppData%\Packages`. This will take you to your `Packages` folder in your local `AppData` (C:\Users\{USER}\AppData\Local\Packages). From here, look for the `Cortana` app. In my case, which will likely be the same for most Windows 10 users, it was called `Microsoft.Windows.Cortana_cw5n1h2txyewy`.
+The reason rebuilding your icon cache never works, is because the standard icon cache databases everyone tells you to delete, are not related. Windows 10 stores icon caches in all sorts of places on your OS. The icons which you see when searching, come from _Cortana's icon cache_. To get there, open up Window's search and enter `%LocalAppData%\Packages`. This will take you to your `Packages` folder in your local `AppData`.
 
-Within this Cortana application folder, under `LocalState`, you'll find an `AppIconCache` folder (C:\Users\{USER}\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\AppIconCache\100).
+`C:\Users\{USER}\AppData\Local\Packages`
+
+From here, look for the `Cortana` app. In my case, which will likely be the same for most Windows 10 users, it was called `Microsoft.Windows.Cortana_cw5n1h2txyewy`. Within this Cortana application folder, under `LocalState`, you'll find an `AppIconCache` folder.
+
+`C:\Users\{USER}\AppData\Local\Packages\Microsoft.Windows.Cortana_cw5n1h2txyewy\LocalState\AppIconCache\100`
 
 If you look in this folder, you will see a lot of files -- these are just image files which Microsoft has not given an extenion. If you append ".jpg" to the end, you'll see the icons.
 
@@ -61,10 +70,6 @@ To do that, right click the `WindowsApps` folder, click `Properties`, then choos
 
 # Noteworthy
 
-Bearing in mind, this is only a stop-gap solution and ideally, finding the root cause would be the ultimate end goal. However, I believe that rests squarely on Microsoft's shoulders.
-
-I considered writing a program that would automatically find and replace some of the most common Windows icons, (ie: Calculator, Settings, etc), but I'm not not sure I really want to invest the time. If anyone else would like to explore that idea, I think it would be great.
-
-I'll further add that in my efforts to narrow down the real cause, I found some instances where the `AppManifest.xml` files for applications referenced non-existant icon image assets. There were also some instances where the AppManifest correctly referenced the image asset, yet was still missing while using Windows Search.
+In my efforts to narrow down the root cause, I found some instances where the `AppManifest.xml` files for applications referenced non-existant icon image assets. There were also some instances where the AppManifest correctly referenced the image asset, yet was still missing while using Windows Search.
 
 My personal feeling is that whatever is happening under the hood, is related to Cortana, and that whatever process builds the Cortana icon cache, is either unable to find the application manifest files, or is otherwise consuming them incorrectly, and thus it does not build the icon cache with the appropriate application icons.
