@@ -4,7 +4,6 @@
 #
 # Author: Brendon LaRusic
 # Email: brendon@larusic.ca
-# LinkedIn: https://www.linkedin.com/in/brendon-larusic/
 # Created: January 5th, 2020
 
 from distutils.dir_util import copy_tree as copyDirectory
