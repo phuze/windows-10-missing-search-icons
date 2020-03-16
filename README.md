@@ -7,11 +7,17 @@ If you've arrived here, it means you've been plauged with the case of missing/co
 
 ## Update
 
-Previously, this was entirely a manual process. I am working on a Python tool which will automate the process.
+I was able to resolve my issue after having determined this is related to **Google Drive File Stream**. The fix in my case was:
+
+1. Uninstall Google Drive File Stream
+2. Download a fresh copy of `googledrivefilestream.exe` from [this Google answer page](https://support.google.com/drive/answer/7329379). Note the name of the installer. **DO NOT** download the installer named `GoogleDriveFSSetup.exe` which you would find from [Google answer #7491144](https://support.google.com/a/answer/7491144)
+3. Through Windows *Display Settings*, change your scale setting from 100% -> 150% -> 175% -> 100%.
+4. Restart your computer. In my case, I found that all my icons were fixed.
+5. Reinstall Google Drive File Steam. Issue has not returned since.
 
 ## Run the Repair Tool
 
-Open an elevated command prompt, navigate to the directory with `repair.py` and run the Python script:
+Previously, this was a manual process. I have built a Python tool to automate the process. To use it, open an elevated command prompt, navigate to the directory with `repair.py` and run the Python script:
 
 `python repair.py`
 
