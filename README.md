@@ -13,7 +13,7 @@ I was able to resolve my issue after having determined this is related to **Goog
 2. Download a fresh copy of `googledrivefilestream.exe` from [Google answer #7329379](https://support.google.com/drive/answer/7329379). Note the name of the installer. **DO NOT** download the installer named `GoogleDriveFSSetup.exe` which you would find from [Google answer #7491144](https://support.google.com/a/answer/7491144).
 3. Through Windows **Display Settings**, change your scale setting from *100% > 150% > 175% > 100%*.
 4. Restart your computer. In my case, I found that all my icons were fixed.
-5. Reinstall Google Drive File Steam. Issue has not returned since.
+5. Reinstall Google Drive File Stream.
 
 ## Run the Repair Tool
 
