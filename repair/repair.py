@@ -20,7 +20,7 @@ def main():
     username = os.getlogin()
 
     # construct the path to the cortana cache
-    appName = 'Microsoft.Windows.Cortana_cw5n1h2txyewy'
+    appName = 'Microsoft.Windows.Search_cw5n1h2txyewy'
     iconCache = 'C:\\Users\\'+username+'\\AppData\\Local\\Packages\\'+appName+'\\LocalState\\AppIconCache\\100'
 
     # the directory this script is in
