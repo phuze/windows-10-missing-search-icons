@@ -2,7 +2,6 @@
 
 If you've arrived here, it means you've been plauged with the case of missing/corrupt icons for Windows Store applications, while using the search functionality in Windows 10.
 
-![Icon Works in the App List](applist.png)
 ![Icon Missing from Search List](search.png)
 
 ## Update
