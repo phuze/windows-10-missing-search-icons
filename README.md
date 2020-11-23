@@ -80,6 +80,6 @@ When you are done or otherwise tired of fixing icons, make sure you return the `
 
 To do that, right click the `WindowsApps` folder, click `Properties`, then choose the `Security` tab and hit the `Advanced` button near the bottom. Click the `Change` link next to the current owner (which should be yourself), and enter `NT Service\TrustedInstaller` in the input box to make TrustedInstaller the owner again.
 
-# Noteworthy
+## Noteworthy
 
 In my efforts to narrow down the root cause, I found some instances where the `AppManifest.xml` files for applications referenced non-existant icon image assets. There were also some instances where the AppManifest correctly referenced the image asset, yet was still missing while using Windows Search.
