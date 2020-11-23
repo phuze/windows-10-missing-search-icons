@@ -16,7 +16,7 @@ I was able to resolve my issue after having determined this is related to **Goog
 
 I will note that this does not permanently resolve the issue. Your mileage will vary with regards to how long your icons will remain restored. Alternatively, you may still continue to utilize the [repair.py](https://github.com/phuze/windows-10-missing-search-icons/blob/master/repair/repair.py) tool. All of the details and instructions you need to expand on the repair toolkit ([repairs.json](https://github.com/phuze/windows-10-missing-search-icons/blob/master/repair/toolkit/repairs.json)) can be found within the remainder of this readme.
 
-_Important:_ Thanks to the user @claell, a ticket was raised via [Google's issue tracker](https://issuetracker.google.com/issues/173912342) and has been file internally for the Google development team.
+_Important:_ Thanks to the user [@claell](https://github.com/phuze/windows-10-missing-search-icons/issues/4#issuecomment-732159630), a ticket was raised via [Google's issue tracker](https://issuetracker.google.com/issues/173912342) and has been file internally for the Google development team.
 
 ***
 
