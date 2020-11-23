@@ -1,10 +1,10 @@
 # Windows 10: Missing Search Icons
 
-If you've arrived here, it means you've been plauged with the case of missing/corrupt icons for Windows Store applications, while using the search functionality in Windows 10.
+If you've arrived here, it means you've been plauged with the case of missing/corrupt icons for Windows applications, while using the search functionality in Windows 10.
 
 ![Icon Missing from Search List](search.png)
 
-## Update
+## Update 2: Google Drive File Stream
 
 I was able to resolve my issue after having determined this is related to **Google Drive File Stream**. I believe the root issue stems from a [limitation with shell overlay icons](https://devblogs.microsoft.com/oldnewthing/20190313-00/?p=101094) in Windows. I further believe that the direct issue, is in how Google is choosing to dynamically create these icon overlays, possibly in an effort to circumvent this shell icon limit in Windows. Regardless, I have had consistent success by executing the following steps:
 
@@ -16,11 +16,15 @@ I was able to resolve my issue after having determined this is related to **Goog
 
 I will note that this does not permanently resolve the issue. Your mileage will vary with regards to how long your icons will remain restored. Alternatively, you may still continue to utilize the [repair.py](https://github.com/phuze/windows-10-missing-search-icons/blob/master/repair/repair.py) tool. All of the details and instructions you need to expand on the repair toolkit ([repairs.json](https://github.com/phuze/windows-10-missing-search-icons/blob/master/repair/toolkit/repairs.json)) can be found within the remainder of this readme.
 
-## Run the Repair Tool
+***
 
-Previously, this was a manual process. I have built a Python tool to automate the process. To use it, open an elevated command prompt, navigate to the directory with `repair.py` and run the Python script. You will need to have [Python 3.x](https://www.python.org/downloads/) installed on your machine.
+## Update 1: Python Repair Tool
+
+I have built a Python tool to help automate the process. To use it, open an elevated command prompt, navigate to the directory with `repair.py` and run the Python script. You will need to have [Python 3.x](https://www.python.org/downloads/) installed on your machine.
 
 `python repair.py`
+
+***
 
 ## Repository Contents
 
@@ -42,7 +46,7 @@ If you look in this folder, you will see a lot of files -- these are just image 
 
 I would recommend you copy the entire folder to your desktop, open a command prompt, navigate to that folder `cd C:\Users\{USER}\Desktop\AppIconCache\100` then execute `ren * *.jpg` to batch rename all of these files. You'll quickly recognize many of the applications you have installed on your computer.
 
-If you continue to analyze this folder content, you'll also find numerous icons that appear corrupt -- and sure enough, they all seem to be related to the Microsoft Store.
+If you continue to analyze this folder content, you'll also find numerous icons that appear corrupt.
 
 ## How To Manually Repair the Icons
 
