@@ -84,6 +84,126 @@
             "title": "Windows Settings",
             "corrupt":"windows_immersivecontrolpanel_cw5n1h2txyewy!microsoft_windows_immersivecontrolpanel",
             "repair":"windows-settings\\settings.png"
+        },
+        {
+            "title": "Windows SnipSketch",
+            "corrupt":"Microsoft_ScreenSketch_8wekyb3d8bbwe!App",
+            "repair":"microsoft-snipsketch\\SnipSketchAppList.scale-200.png"
+        },
+        {
+            "title": "Windows Cortana",
+            "corrupt":"Microsoft_549981C3F5F10_8wekyb3d8bbwe!App",
+            "repair":"microsoft-cortana\\StoreLogo.scale-200.png"
+        },
+        {
+            "title": "Windows BingWeather",
+            "corrupt":"Microsoft_BingWeather_8wekyb3d8bbwe!App",
+            "repair":"microsoft-bingweather\\WeatherAppList.scale-200.png"
+        },
+        {
+            "title": "Windows GetHelp",
+            "corrupt":"Microsoft_GetHelp_8wekyb3d8bbwe!App",
+            "repair":"microsoft-gethelp\\GetHelpAppList.scale-200.png"
+        },
+        {
+            "title": "Windows GetStarted",
+            "corrupt":"Microsoft_Getstarted_8wekyb3d8bbwe!App",
+            "repair":"microsoft-getstarted\\TipsAppList.scale-100.png"
+        },
+        {
+            "title": "Windows 3D Viewer",
+            "corrupt":"Microsoft_Microsoft3DViewer_8wekyb3d8bbwe!Microsoft_Microsoft3DViewer",
+            "repair":"microsoft-3dviewer\\StoreLogo.scale-200.png"
+        },
+        {
+            "title": "Windows OfficeHub",
+            "corrupt":"Microsoft_MicrosoftOfficeHub_8wekyb3d8bbwe!Microsoft_MicrosoftOfficeHub",
+            "repair":"microsoft-officehub\\Square44x44Logo.scale-200.png"
+        },
+        {
+            "title": "Windows MixedReality",
+            "corrupt":"Microsoft_MixedReality_Portal_8wekyb3d8bbwe!App",
+            "repair":"microsoft-mixedreality\\MixedRealityPortalAppList.scale-200.png"
+        },
+        {
+            "title": "Windows Skype",
+            "corrupt":"Microsoft_SkypeApp_kzf8qxf38zg5c!App",
+            "repair":"microsoft-skype\\SkypeAppList.scale-200.png"
+        },
+        {
+            "title": "Windows Alarm",
+            "corrupt":"Microsoft_WindowsAlarms_8wekyb3d8bbwe!App",
+            "repair":"microsoft-alarm\\AlarmsAppList.scale-200.png"
+        },
+        {
+            "title": "Windows Calendar",
+            "corrupt":"microsoft_windowscommunicationsapps_8wekyb3d8bbwe!microsoft_windowslive_calendar",
+            "repair":"microsoft-calendar\\HxCalendarAppList.scale-200.png"
+        },
+        {
+            "title": "Windows Mail",
+            "corrupt":"microsoft_windowscommunicationsapps_8wekyb3d8bbwe!microsoft_windowslive_mail",
+            "repair":"microsoft-mail\\HxMailAppList.scale-200.png"
+        },
+        {
+            "title": "Windows FeedbackHub",
+            "corrupt":"Microsoft_WindowsFeedbackHub_8wekyb3d8bbwe!App",
+            "repair":"microsoft-feedback\\FeedbackHubAppList.scale-200.png"
+        },
+        {
+            "title": "Windows SoundRecorder",
+            "corrupt":"Microsoft_WindowsSoundRecorder_8wekyb3d8bbwe!App",
+            "repair":"microsoft-soundrecorder\\VoiceRecorderAppList.scale-100.png"
+        },
+        {
+            "title": "Windows Camera",
+            "corrupt":"Microsoft_WindowsCamera_8wekyb3d8bbwe!App",
+            "repair":"microsoft-camera\\CameraAppList.scale-100.png"
+        },
+        {
+            "title": "Windows Terminal",
+            "corrupt":"Microsoft_WindowsTerminal_8wekyb3d8bbwe!App",
+            "repair":"windows-terminal\\StoreLogo.scale-200.png"
+        },
+        {
+            "title": "Xbox App Companion",
+            "corrupt":"Microsoft_XboxApp_8wekyb3d8bbwe!Microsoft_XboxApp",
+            "repair":"xbox-app\\GamesXboxHubAppList.scale-100.png"
+        },
+        {
+            "title": "Windows YourPhone",
+            "corrupt":"Microsoft_YourPhone_8wekyb3d8bbwe!App",
+            "repair":"microsoft-yourphone\\AppIcon.scale-200.png"
+        },
+        {
+            "title": "Windows ZuneMusic",
+            "corrupt":"Microsoft_ZuneMusic_8wekyb3d8bbwe!Microsoft_ZuneMusic",
+            "repair":"zunemusic\\AppList.scale-200.png"
+        },
+        {
+            "title": "Windows ZuneVideo",
+            "corrupt":"Microsoft_ZuneVideo_8wekyb3d8bbwe!Microsoft_ZuneVideo",
+            "repair":"zunevideo\\AppList.scale-200.png"
+        },
+        {
+            "title": "NVIDIA Control Panel",
+            "corrupt":"NVIDIACorp_NVIDIAControlPanel_56jybvy8sckqj!NVIDIACorp_NVIDIAControlPanel",
+            "repair":"nvidia-controlpanel\\StoreLogo.scale-200.png"
+        },
+        {
+            "title": "Spotify",
+            "corrupt":"SpotifyAB_SpotifyMusic_zpdnekdrzrea0!Spotify",
+            "repair":"spotify\\Square44x44Logo.scale-200.png"
+        },
+        {
+            "title": "Python Idle",
+            "corrupt":"PythonSoftwareFoundation_Python_3_9_qbz5n2kfra8p0!Idle",
+            "repair":"python\\idlex150.png"
+        },
+        {
+            "title": "Python",
+            "corrupt":"PythonSoftwareFoundation_Python_3_9_qbz5n2kfra8p0!Python",
+            "repair":"python\\pythonx150.png"
         }
     ]
 }
