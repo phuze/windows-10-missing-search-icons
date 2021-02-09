@@ -49,11 +49,12 @@ def main():
     # identify the corrupted icons
     print('identifying corrupt icons...')
     for filename in os.listdir(corruptStore):
-        match1 = match2 = match3 = None
+        match1 = match2 = match3 = match4 = None
         match1 = open(corruptStore+'\\'+filename,'rb').read() == open('toolkit\\compare1','rb').read()
         match2 = open(corruptStore+'\\'+filename,'rb').read() == open('toolkit\\compare2','rb').read()
         match3 = open(corruptStore+'\\'+filename,'rb').read() == open('toolkit\\compare3','rb').read()
-        if match1 or match2 or match3:
+        match4 = open(corruptStore+'\\'+filename,'rb').read() == open('toolkit\\compare4','rb').read()
+        if match1 or match2 or match3 or match4:
             print('corrupt icon found: ~\\'+filename)
         else:
             os.remove(corruptStore+'\\'+filename)
