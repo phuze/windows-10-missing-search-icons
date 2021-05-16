@@ -9,7 +9,7 @@ If you've arrived here, it means you've been plauged with the case of missing/co
 I was able to resolve my issue after having determined this is related to **Google Drive File Stream**. I believe the root issue stems from a [limitation with shell overlay icons](https://devblogs.microsoft.com/oldnewthing/20190313-00/?p=101094) in Windows. I further believe that the direct issue, is in how Google is choosing to dynamically create these icon overlays, possibly in an effort to circumvent this shell icon limit in Windows. Regardless, I have had consistent success by executing the following steps:
 
 1. Uninstall Google Drive File Stream
-2. Download a fresh copy of `googledrivefilestream.exe` from [Google answer #7329379](https://support.google.com/drive/answer/7329379). Note the name of the installer. **DO NOT** download the installer named `GoogleDriveFSSetup.exe` which you would find from [Google answer #7491144](https://support.google.com/a/answer/7491144).
+2. Download a fresh copy of `GoogleDriveFSSetup.exe` from [Google answer #7329379](https://support.google.com/drive/answer/7329379).
 3. Through Windows **Display Settings**, change your scale setting from *100% > 150% > 175% > 100%*.
 4. Restart your computer. Your icons should be restored.
 5. Reinstall Google Drive File Stream.
