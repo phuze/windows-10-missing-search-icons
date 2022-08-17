@@ -1,12 +1,12 @@
 # Windows 10: Missing Search Icons
 
-If you've arrived here, it means you've been plauged with the case of missing/corrupt icons for Windows applications, while using the search functionality in Windows 10.
+If you've arrived here, it means you've been plagued with the case of missing/corrupt icons for Windows applications while using the search functionality in Windows 10.
 
 ![Icon Missing from Search List](search.png)
 
 ## Update 2: Google Drive File Stream
 
-I was able to resolve my issue after having determined this is related to **Google Drive File Stream**. I believe the root issue stems from a [limitation with shell overlay icons](https://devblogs.microsoft.com/oldnewthing/20190313-00/?p=101094) in Windows. I further believe that the direct issue, is in how Google is choosing to dynamically create these icon overlays, possibly in an effort to circumvent this shell icon limit in Windows. Regardless, I have had consistent success by executing the following steps:
+I was able to resolve my issue after having determined this is related to **Google Drive File Stream**. I believe the root issue stems from a [limitation with shell overlay icons](https://devblogs.microsoft.com/oldnewthing/20190313-00/?p=101094) in Windows. I further believe that the direct issue is in how Google is choosing to dynamically create these icon overlays, possibly in an effort to circumvent this shell icon limit in Windows. Regardless, I have had consistent success by executing the following steps:
 
 1. Uninstall Google Drive File Stream
 2. Download a fresh copy of `GoogleDriveFSSetup.exe` from [Google answer #7329379](https://support.google.com/drive/answer/7329379).
@@ -36,7 +36,7 @@ The `repair` directory contains the repair tool `repair.py`, in addition to an `
 
 ## Identifying the Issue
 
-The reason rebuilding your icon cache never works, is because the standard icon cache databases everyone tells you to delete, are not related. Windows 10 stores icon caches in all sorts of places on your OS. The icons which you see when searching, come from _Search's icon cache_ (previously _Cortana's icon cache_). To get there, open up Window's search and enter `%LocalAppData%\Packages`. This will take you to your `Packages` folder in your local `AppData`.
+The reason rebuilding your icon cache never works is because the standard icon cache databases everyone tells you to delete are not related. Windows 10 stores icon caches in all sorts of places on your OS. The icons which you see when searching, come from _Search's icon cache_ (previously _Cortana's icon cache_). To get there, open up Window's search and enter `%LocalAppData%\Packages`. This will take you to your `Packages` folder in your local `AppData`.
 
 `C:\Users\{USER}\AppData\Local\Packages`
 
@@ -44,23 +44,23 @@ From here, look for the `Search` app. In my case, which will likely be the same 
 
 `C:\Users\{USER}\AppData\Local\Packages\Microsoft.Windows.Search_cw5n1h2txyewy\LocalState\AppIconCache\100`
 
-If you look in this folder, you will see a lot of files -- these are just image files which Microsoft has not given an extenion. If you append ".jpg" to the end, you'll see the icons.
+If you look in this folder, you will see a lot of files -- these are just image files that Microsoft has not given an extension. If you append ".jpg" to the end, you'll see the icons.
 
-I would recommend you copy the entire folder to your desktop, open a command prompt, navigate to that folder `cd C:\Users\{USER}\Desktop\AppIconCache\100` then execute `ren * *.jpg` to batch rename all of these files. You'll quickly recognize many of the applications you have installed on your computer.
+I would recommend you copy the entire folder to your desktop, open a command prompt, navigate to that folder `cd C:\Users\{USER}\Desktop\AppIconCache\100`, then execute `ren * *.jpg` to batch rename all of these files. You'll quickly recognize many of the applications you have installed on your computer.
 
 If you continue to analyze this folder content, you'll also find numerous icons that appear corrupt.
 
 ## How To Manually Repair the Icons
 
-All Windows Store applications are installed to the `WindowsApps` folder on your C drive (C:\Program Files\WindowsApps). By default, this is a protected folder and in order to gain access, you will need to first take ownership of it.
+All Windows Store applications are installed to the `WindowsApps` folder on your C drive (C:\Program Files\WindowsApps). By default, this is a protected folder, and to gain access, you must first take ownership of it.
 
-To do that, right click the `WindowsApps` folder, click `Properties`, then choose the `Security` tab and hit the `Advanced` button near the bottom. You'll see that the current Owner is `TrustedInstaller`. Click the `Change` link to the right of that and enter your Windows profile name in the input box to make yourself the owner. Ensure that you choose to _Replace owner on all subcontainers and objects_. Once you've taken ownership, be sure to grant yourself `Full Control` by using the `Add` button, selecting your Widows profile from the `Select a principal` link.
+To do that, right-click the `WindowsApps` folder, click `Properties`, then choose the `Security` tab and hit the `Advanced` button near the bottom. You'll see that the current Owner is `TrustedInstaller`. Click the `Change` link to the right of that and enter your Windows profile name in the input box to make yourself the owner. Ensure that you choose to _Replace owner on all subcontainers and objects_. Once you've taken ownership, be sure to grant yourself `Full Control` by using the `Add` button, selecting your Widows profile from the `Select a principal` link.
 
 Now that you have access to this folder, you can begin the process of replacing your icons. I would recommend you choose your most frequently accessed applications, the ones that bother you the most, and work on replacing those.
 
-I found that most applications should have an image asset that contains the name `StoreLogo` in some form. Searching within the `WindowsApps` folder for this _StoreLogo_ term, will yeild many icons to get the ball rolling.
+I found that most applications should have an image asset that contains the name `StoreLogo` in some form. Searching within the `WindowsApps` folder for this _StoreLogo_ term will yield many icons to get the ball rolling.
 
-All you need to do, is find the application icon you are trying to fix, which should be a .png image, and rename it to match the filename you found in the Search `AppIconCache` folder.
+All you need to do is find the application icon you are trying to fix, which should be a .png image, and rename it to match the filename you found in the Search `AppIconCache` folder.
 
 ## Example
 
@@ -80,8 +80,8 @@ In order to save yourself some time, check out the [icons](https://github.com/ph
 
 When you are done or otherwise tired of fixing icons, make sure you return the `WindowsApps` folder back to its rightful owner.
 
-To do that, right click the `WindowsApps` folder, click `Properties`, then choose the `Security` tab and hit the `Advanced` button near the bottom. Click the `Change` link next to the current owner (which should be yourself), and enter `NT Service\TrustedInstaller` in the input box to make TrustedInstaller the owner again.
+To do that, right-click the `WindowsApps` folder, click `Properties`, then choose the `Security` tab and hit the `Advanced` button near the bottom. Click the `Change` link next to the current owner (which should be yourself), and enter `NT Service\TrustedInstaller` in the input box to make TrustedInstaller the owner again.
 
 ## Noteworthy
 
-In my efforts to narrow down the root cause, I found some instances where the `AppManifest.xml` files for applications referenced non-existant icon image assets. There were also some instances where the AppManifest correctly referenced the image asset, yet was still missing while using Windows Search.
+In my efforts to narrow down the root cause, I found some instances where the `AppManifest.xml` files for applications referenced non-existent icon image assets. There were also some instances where the AppManifest correctly referenced the image asset yet was still missing while using Windows Search.
