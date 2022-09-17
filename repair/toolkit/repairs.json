@@ -204,6 +204,11 @@
             "title": "Python",
             "corrupt":"PythonSoftwareFoundation_Python_3_9_qbz5n2kfra8p0!Python",
             "repair":"python\\pythonx150.png"
+        },
+        {
+            "title": "Visual Studio Code",
+            "corrupt":"Microsoft_VisualStudioCode",
+            "repair":"microsoft-visualstudiocode\\VsCode.scale-200.png"
         }
     ]
 }
